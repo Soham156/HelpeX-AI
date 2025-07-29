@@ -108,9 +108,9 @@ const WriteArticle = () => {
             <h1 className='text-xl font-semibold'>Generated article</h1>
           </div>
 
-          <div className='flex-1 mt-4 overflow-y-auto'>
+          <div className='flex-1 mt-4 overflow-y-auto flex flex-col'>
             {loading ? (
-              <div className='flex flex-col items-center justify-center h-full text-gray-400'>
+              <div className='flex flex-col items-center justify-center flex-1 text-gray-400'>
                 <Loader className='w-8 h-8 animate-spin mb-3' />
                 <p className='text-sm'>Generating your article...</p>
                 <p className='text-xs mt-1'>This may take a few moments</p>
@@ -122,8 +122,8 @@ const WriteArticle = () => {
                 </div>
               </div>
             ) : (
-              <div className='flex justify-center items-center h-full'>
-                <div className='text-sm flex flex-col items-center gap-5 text-gray-400'>
+              <div className='flex justify-center items-center flex-1'>
+                <div className='text-sm flex flex-col items-center justify-center gap-5 text-gray-400 text-center'>
                   <Edit className='w-9 h-9' />
                   <p>Enter a topic and click "Generate article" to get started</p>
                 </div>
